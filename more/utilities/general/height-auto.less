@@ -1,0 +1,4 @@
+.height-auto() {
+    width: auto\9; // height:auto works in IE7, but not in IE8. To fix this, you need to add width:auto\9 for IE8.
+    height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}

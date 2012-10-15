@@ -1,0 +1,10 @@
+// I do use this in the standardize framework on all images
+.responsive-image() {
+// Responsive images (ensure images don't scale beyond their parents)
+    max-width: 100%; // Part 1: Set a maxium relative to the parent
+    .height-auto; // height:auto doesn't work in ie 8
+
+    vertical-align: middle; // images are inline elements
+
+    -ms-interpolation-mode: bicubic; // css-tricks.com/ie-fix-bicubic-scaling-for-images/
+}

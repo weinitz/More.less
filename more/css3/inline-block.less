@@ -1,0 +1,11 @@
+// CSS image replacement
+// Source: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
+// ----------------
+.inline-block() {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    .has-layout;
+    // Not sure about this but this is how compass does it
+    *vertical-align: auto;
+}

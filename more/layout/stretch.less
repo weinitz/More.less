@@ -1,0 +1,22 @@
+// stretch element height to specified top and bottom position
+.stretch(y, @top:0, @bottom:0) {
+    top: @top;
+    bottom: @bottom;
+}
+
+
+// stretch element width to specified left and right position
+.stretch(x, @left:0, @right:0) {
+    right: @right;
+    left:@left;
+}
+
+.stretch(x, @left:0, @right:0) when (@left = 0) and (@right = 0) {
+    width: 100%;
+}
+
+
+// shorthand to stretch element height and width
+.stretch(...) {
+    position: absolute;
+}

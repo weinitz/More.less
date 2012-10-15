@@ -1,0 +1,5 @@
+// Ie 7 friendly icons. This is kind of how font awesome does it.
+.font-icon(@char) {
+    *zoom: ~"expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x@{char};&nbsp;')";
+    &:before                { content: "\@{char}"; }
+}
