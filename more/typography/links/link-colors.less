@@ -1,0 +1,46 @@
+// When setting the style for several link states, there are some order rules:
+// a:hover MUST come after a:link and a:visited
+// a:active MUST come after a:hover
+// a { .link-colors(#0000ff, #ff0000); } // Skip hover and active
+// You can skip a pseudo classes by pass a switch of the prefered argument
+// a { .link-colors(active, @normal, @hover, @active ): will skip visited
+// Nomal is required
+
+
+
+/*
+.link-colors( @normal, @visited: false, @hover: false, @active: false ) {
+    .link-colors(visited, @normal, @visited, @hover );
+    &:active { color: @active; }
+}*/
+/*
+// Skip active
+.link-colors(@normal, @visited, @hover ) {
+    .link-colors(visited, @normal, @visited);
+    &:hover { color: @hover; }
+}
+
+// Skip visited
+.link-colors(active, @normal, @hover, @active ) {
+    .link-colors(hover, @normal, @hover);
+    &:active { color: @active; }
+}
+
+// Skip hover and active
+.link-colors(visited, @normal, @visited ) {
+    color: @normal;
+    &:visited { color: @visited; }
+}
+
+// Skip visited and active
+.link-colors(hover, @normal, @hover ) {
+    color: @normal;
+    &:hover { color: @hover; }
+}
+
+// Skip visited and hover
+.link-colors(active, @normal, @active ) {
+    color: @normal;
+    &:active { color: @active; }
+}*/
+

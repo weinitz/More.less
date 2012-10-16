@@ -1,13 +1,18 @@
-// .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
-
-
-.animation (...) {
-    -webkit-animation-name: @arguments;
-    -moz-animation-name: @arguments;
-    -ms-animation-name: @arguments;
-    -o-animation-name: @arguments;
-    animation-name: @arguments;
+.animation(...) {
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    -ms-animation: @arguments;
+    -o-animation: @arguments;
+    animation: @arguments;
 }
+
+.animation-name(@name) {
+    -webkit-animation-name: @name;
+    -moz-animation-name: @name;
+    -o-animation-name: @name;
+    animation-name: @name;
+}
+
 
 .animated(@speed: 1s) {
     -webkit-animation-duration: @speed;
@@ -19,31 +24,5 @@
     -o-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-
-/*
-.keyframes (@name, @frames) {
-    @-webkit-keyframes @name {@frames}
-    @-moz-keyframes @name {@frames}
-    @-ms-keyframes @name {@frames}
-    @-o-keyframes @name {@frames}
-    @keyframes @name {@frames}
-}
-
-
-
-
-.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
-    -webkit-animation: @arguments;
-    -moz-animation: @arguments;
-    -ms-animation: @arguments;
-    -o-animation: @arguments;
-    animation: @arguments;
-}
-
-
-
-
-
-*/
 
 
