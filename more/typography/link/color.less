@@ -1,0 +1,35 @@
+// When setting the style for several link states, there are some order rules:
+// a:hover MUST come after a:link and a:visited
+// a:active MUST come after a:hover
+// a { #link > .colors(#0000ff, #ff0000); } // will give you normal and hover
+
+
+#link {
+    .colors (@normal, @hover: false, @active: false, @visited: false, @focus: false) {
+        color: @normal;
+    }
+
+    .colors (@normal, @hover: false, @active: false, @visited: false, @focus: false) when not (@visited = false) {
+        &:visited {
+            color: @visited;
+        }
+    }
+
+    .colors (@normal, @hover: false, @active: false, @visited: false, @focus: false) when not (@focus = false) {
+        &:focus {
+            color: @focus;
+        }
+    }
+
+    .colors (@normal, @hover: false, @active: false, @visited: false, @focus: false) when not (@hover = false) {
+        &:hover {
+            color: @hover;
+        }
+    }
+
+    .colors (@normal, @hover: false, @active: false, @visited: false, @focus: false) when not (@active = false) {
+        &:active {
+            color: @active;
+        }
+    }
+}

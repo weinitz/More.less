@@ -1,0 +1,6 @@
+// Direction independent float mixin that fixes the
+// [double-margin bug in IE5/6](http://www.positioniseverything.net/explorer/doubled-margin.html)
+.float(@side: left) {
+    float: @side;
+    display: inline;
+}

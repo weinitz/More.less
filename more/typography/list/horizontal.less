@@ -1,0 +1,44 @@
+#list {
+    // Shall be used on description-lists only
+    // Usage dl { #list > .horizontal }
+    .horizontal-description(@offset) {
+        .clearfix(); // Ensure dl clears floats if empty dd elements present
+
+        dt {
+            #float > .left;
+            width: @offset - 20;
+            clear: left;
+            text-align: right;
+            .ellipsis();
+        }
+
+        dd {
+            margin-left: @offset;
+        }
+    }
+
+    // Can be mixed into any selector that target a ul or ol that is meant
+    // to have a horizontal layout. Used to implement +horizontal-list.
+    .horizontal-container() {
+        #reset > .box-model;
+        .clearfix;
+    }
+
+
+    .horizontal-item (@direction: left) {
+        #list > .unstyled-item;
+        .nowrap;
+        .float(@direction);
+    }
+
+    // A list(ol,ul) that is layed out such that the elements are floated left and won't wrap.
+    // This is not an inline list.
+    //
+    // Setting `$padding` to `false` disables the padding between list elements
+    .horizontal(@padding: 4px, @direction: left) {
+        #list > .horizontal-container;
+        li {
+            #list > .horizontal-item(@direction);
+        }
+    }
+}
