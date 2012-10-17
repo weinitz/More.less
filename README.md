@@ -4,11 +4,11 @@ More.less is a collection of css3 and cross-browser mixins and will ease your de
 Give it a try I know you'll love it.
 
 
-The goal is not to bloat your css and ease your development.
-No classes will be added to your css when you use.
+The goal is not to bloat your css but to ease your development.
+No classes will be added to your css when you use More.less.
 
-More.less will not supply you width any components, but will supply you with
- some solutions in example for lists, links, texts and more.
+More.less will not supply you with any components, but will supply you with
+ some solutions for lists, links, texts and more.
 
 Animations
 More.less includes all animate.css animations http://daneden.me/animate/
