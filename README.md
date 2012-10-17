@@ -21,7 +21,7 @@ more/animation/bounce/(in|out)/bounce.less
 
 Example usage of animations
 
-    @import "more.less";                                 // Used to create the shape of the ball
+    @import "more.less";                                 // Import more.less don't worry nothing will be added to your css
     @import "more/animation/bounce.less";               // A bounce animation
 
 
