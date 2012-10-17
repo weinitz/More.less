@@ -1,0 +1,10 @@
+#box {
+    // box-direction: normal | reverse
+    .direction(@direction: normal) {
+        -webkit-box-direction: @direction;
+        -moz-box-direction: @direction;
+        -ms-box-direction: @direction;
+        box-direction: @direction;
+    }
+}
+
