@@ -1,4 +1,8 @@
-.circle(@size) {
-    .square(@size);
-    .border-radius(@size/2);
+@import "../css3/border-radius.less";
+
+#shape {
+    .circle(@size) {
+        #shape > .square(@size);
+        .border-radius(@size/2);
+    }
 }
