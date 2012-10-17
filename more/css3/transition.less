@@ -5,9 +5,34 @@
     transition: @transition;
 }
 
-.transition-delay(@transition-delay) {
-    -webkit-transition-delay: @transition-delay;
-    -moz-transition-delay: @transition-delay;
-    -o-transition-delay: @transition-delay;
-    transition-delay: @transition-delay;
+#transition {
+    .duration(@duration) {
+        transition-duration: @duration;
+        -moz-transition-duration: @duration; // Firefox 4
+        -webkit-transition-duration: @duration; // Safari and Chrome
+        -o-transition-duration: @duration; // Opera
+    }
+
+    .delay(@transition-delay) {
+        -webkit-transition-delay: @delay;
+        -moz-transition-delay: @delay;
+        -o-transition-delay: @delay;
+        transition-delay: @delay;
+    }
+
+    .property(@property) {
+        transition-property:@property;
+        -moz-transition-property: @property; // Firefox 4
+        -webkit-transition-property:@property; // Safari and Chrome
+        -o-transition-property:@property; // Opera
+    }
+
+    .timing-function(@function) {
+        transition-timing-function: @function;
+        -moz-transition-timing-function: @function; // Firefox 4
+        -webkit-transition-timing-function: @function; // Safari and Chrome
+        -o-transition-timing-function: @function; // Opera
+    }
+
+
 }

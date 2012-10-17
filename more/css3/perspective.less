@@ -1,0 +1,13 @@
+.perspective (@value: 3000) {
+    -webkit-perspective: @value;  // Safari 4+, Chrome 12+
+    -moz-perspective: @value;  // Firefox 10+
+    -ms-perspective: @value;  // IE10+
+    perspective: @value;
+}
+
+#perspective {
+    .origin(@origin) {
+        perspective-origin: @origin;
+        -webkit-perspective-origin: @origin; // Safari and Chrome
+    }
+}

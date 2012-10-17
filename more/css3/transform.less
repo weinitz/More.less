@@ -1,6 +1,4 @@
 // dev.w3.org/csswg/css3-transforms/
-
-
 .transform(@transform) {
     -webkit-transform: @transform;
     -moz-transform: @transform;
@@ -9,19 +7,36 @@
     transform: @transform;
 }
 
-.rotate(@degrees) {
-    .transform( rotate(@degrees) );
-}
-.scale(@ratio) {
-    .transform( scale(@ratio) );
-}
-//scaleX
-//scaleY
-.skew(@x, @y) {
-    .transform( skew(@x, @y) );
-    -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
-}
+#transform {
+    .style(@style) {
+        -webkit-transform-style: @style;
+        -moz-transform-style: @style;
+        -ms-transform-style: @style;
+        -o-transform-style: @style;
+        transform-style: @style;
+    }
 
-.translate(@x, @y) {
-    .transform( translate(@x, @y) );
+    .origin(@origin) {
+        -webkit-transform-origin: @origin;
+        -moz-transform-origin: @origin;
+        -o-transform-origin: @origin;
+        transform-origin: @origin;
+    }
+
+    .rotate(@degrees) {
+        .transform( rotate(@degrees) );
+    }
+
+    .scale(@ratio) {
+        .transform( scale(@ratio) );
+    }
+
+    .skew(@x, @y) {
+        .transform( skew(@x, @y) );
+        -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+    }
+
+    .translate(@x, @y) {
+        .transform( translate(@x, @y) );
+    }
 }

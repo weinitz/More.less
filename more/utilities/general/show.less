@@ -1,8 +1,18 @@
-// Jquery style. Animation may be included in the future
+// Jquery style.
+// All animations requires css3/animation.less
 .show() {
     display: block;
 }
 
-.hide() {
-    display: none;
+.show (@speed) when (@speed = slow) {
+    .show(600);
+}
+
+.show (@speed) when (@speed = fast) {
+    .show(200);
+}
+
+.show (@speed) when ( isnumber(@speed) ) {
+    #animation > .init(@speed/100s);
+    #animation > .fade(in);
 }

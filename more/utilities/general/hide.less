@@ -1,0 +1,17 @@
+// Jquery style.
+.hide() {
+    display: none;
+}
+
+.hide(@speed) when (@speed = slow) {
+    .hide(600);
+}
+
+.hide (@speed) when (@speed = fast) {
+    .hide(200);
+}
+
+.hide(@speed) when ( isnumber(@speed) ) {
+    #animation > .init(@speed/100s);
+    #animation > .fade(out);
+}

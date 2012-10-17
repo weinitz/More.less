@@ -6,23 +6,70 @@
     animation: @arguments;
 }
 
-.animation-name(@name) {
-    -webkit-animation-name: @name;
-    -moz-animation-name: @name;
-    -o-animation-name: @name;
-    animation-name: @name;
+#animation {
+    .init(@duration: 1s) {
+        #animation > .duration(@duration);
+        #animation > .fill-mode(both);
+    }
+
+    .name(@name) {
+        -webkit-animation-name: @name;
+        -moz-animation-name: @name;
+        -o-animation-name: @name;
+        animation-name: @name;
+    }
+
+    .duration(@duration: 2s) {
+        animation-duration: @duration;
+        -moz-animation-duration: @duration; /* Firefox */
+        -webkit-animation-duration: @duration; /* Safari and Chrome */
+        -o-animation-duration: @duration; /* Opera */
+    }
+
+    .timing-function(@function) {
+        -webkit-animation-timing-function: @function;
+        -moz-animation-timing-function: @function;
+        -o-animation-timing-function: @function;
+        animation-timing-function: @function;
+    }
+
+    .delay(@delay) {
+        animation-delay:@delay;
+        -moz-animation-delay:@delay; /* Firefox */
+        -webkit-animation-delay:@delay; /* Safari and Chrome */
+        -o-animation-delay:@delay; /* Opera */
+    }
+
+    .iteration-count(@count: 1) {
+        animation-iteration-count:@count;
+        -moz-animation-iteration-count:@count; /* Firefox */
+        -webkit-animation-iteration-count:@count; /*Safari and Chrome*/
+        -o-animation-iteration-count:@count; /* Opera */
+    }
+
+    .direction(@direction) {
+        animation-direction:@direction;
+        -moz-animation-direction:@direction; /* Firefox */
+        -webkit-animation-direction:@direction; /* Safari and Chrome */
+        -o-animation-direction:@direction; /* Opera */
+    }
+
+    .play-state(@state) {
+        animation-play-state:@state;
+        -moz-animation-play-state:@state; /* Firefox*/
+        -webkit-animation-play-state:@state; /* Safari and Chrome */
+        -o-animation-play-state:@state; /* Opera */
+    }
+
+    .fill-mode(@mode) {
+        -webkit-animation-fill-mode: @mode;
+        -moz-animation-fill-mode: @mode;
+        -o-animation-fill-mode: @mode;
+        animation-fill-mode: @mode;
+    }
 }
 
 
-.animated(@speed: 1s) {
-    -webkit-animation-duration: @speed;
-    -moz-animation-duration: @speed;
-    -o-animation-duration: @speed;
-    animation-duration: @speed;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
+
 
 

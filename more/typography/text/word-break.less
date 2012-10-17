@@ -1,0 +1,27 @@
+// Mixins to support specific CSS Text Level 3 elements
+//
+//
+//
+// Mixin for word-break properties
+// http://www.w3.org/css3-text/#word-break
+// * legal values for $type : normal, keep-all, break-all
+//
+// Example:
+//    p.wordBreak {@include word-break(break-all);}
+//
+// Which generates:
+//    p.wordBreak {
+//      -ms-word-break: break-all;
+//      word-break: break-all;
+//      word-break: break-word;}
+//
+.word-break (@value: normal) when (@value = break-all) {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+}
+
+.word-break (@value: normal) when not (@value = break-all) {
+    -ms-word-break: @value;
+    word-break: @value;
+}
