@@ -10,7 +10,8 @@
     // turns off the bullets for an entire list
     // Usage ul { #list > .unstyled; }
     .unstyled() {
+        padding: 0;
         list-style: none;
-        li { #list > .unstyled-item(); }
+        li { #list > .unstyled-item; }
     }
 }

@@ -1,8 +1,13 @@
 #shape {
     .triangle(up, @size, @color) {
-        .square(0);
+        #shape > .square(0);
         border-bottom: @size solid @color;
         border-left: @size/2 solid transparent;
         border-right: @size/2 solid transparent;
+    }
+
+    .triangle-reverse(up, @size, @color) {
+        border-top: @size solid @color;
+        border-bottom: 0;
     }
 }

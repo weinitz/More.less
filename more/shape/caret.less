@@ -1,0 +1,76 @@
+#shape {
+    .caret(@direction, @size, @color) {
+        content: '';
+        display: inline-block;
+        #shape > .triangle (@direction, @size, @color);
+        position: absolute;
+    }
+
+    .caret(up, @size, @backgroundColor, @borderColor) {
+        &:before {
+            #shape > .caret(up, @size, @borderColor);
+            top: -1 * @size;
+            left: 9px;
+        }
+
+        &:after {
+            #shape > .caret(up, @size - 1, @backgroundColor);
+            top: (-1 * @size) + 1;
+            left: 10px;
+        }
+    }
+
+    .caret-reverse(up, @size, @backgroundColor, @borderColor) {
+        &:before {
+            #shape > .triangle-reverse(up, @size, @borderColor);
+            bottom: -1 * @size;
+            top: auto;
+        }
+        &:after {
+            #shape > .triangle-reverse(up, @size - 1, @backgroundColor);
+            bottom: (-1 * @size) + 1;
+            top: auto;
+        }
+    }
+
+    .caret(down, @size, @backgroundColor, @borderColor) {
+        &:before {
+            #shape > .caret(down, @size, @borderColor);
+            bottom: -1 * @size;
+            top: auto;
+        }
+
+        &:after {
+            #shape > .caret(down, @size - 1, @backgroundColor);
+            bottom: (-1 * @size) + 1;
+            top: auto;
+        }
+    }
+
+    .caret-reverse(down, @size, @backgroundColor, @borderColor) {
+        &:before {
+            #shape > .triangle-reverse(down, @size, @borderColor);
+            top: -1 * @size;
+            left: 9px;
+        }
+        &:after {
+            #shape > .triangle-reverse(down, @size - 1, @backgroundColor);
+            top: (-1 * @size) + 1;
+            left: 10px;
+        }
+    }
+
+    .caret(left, @size, @backgroundColor, @borderColor) {
+        &:before {
+            #shape > .caret(left, @size, @borderColor);
+            left: -1 * (@size+3);
+            top: @size - 1;
+        }
+
+        &:after {
+            #shape > .caret(left, @size - 1, @backgroundColor);
+            left: (-1 * (@size+3)) + 1;
+            top: @size;
+        }
+    }
+}
