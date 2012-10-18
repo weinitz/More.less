@@ -28,9 +28,9 @@ Example usage of animations
     .animated-ball {
         #animation > .init(1.5s);                    // Init the animation with it's speed
         #animation > .delay(1s);                    // Let's wait a while before the animation can start
-        #animation > .iteration-count(infinite);   // Please never stop, awesome animation
-        // a switch is used to separate           //
-        // in and out animations
+        #animation > .infinite;                    // Please never stop, awesome animation
+                                                  // A switch is used to separate
+                                                 // In and out animations
         #animation > .bounce(in);               // This is the actual animation
 
         #shape > .circle(80px);               // Create a circle/ball

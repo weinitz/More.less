@@ -21,9 +21,9 @@
 
     .duration(@duration: 2s) {
         animation-duration: @duration;
-        -moz-animation-duration: @duration; /* Firefox */
-        -webkit-animation-duration: @duration; /* Safari and Chrome */
-        -o-animation-duration: @duration; /* Opera */
+        -moz-animation-duration: @duration; // Firefox
+        -webkit-animation-duration: @duration; // Safari and Chrome
+        -o-animation-duration: @duration; // Opera
     }
 
     .timing-function(@function) {
@@ -35,30 +35,34 @@
 
     .delay(@delay) {
         animation-delay:@delay;
-        -moz-animation-delay:@delay; /* Firefox */
-        -webkit-animation-delay:@delay; /* Safari and Chrome */
-        -o-animation-delay:@delay; /* Opera */
+        -moz-animation-delay:@delay; // Firefox
+        -webkit-animation-delay:@delay; // Safari and Chrome
+        -o-animation-delay:@delay; // Opera
     }
 
     .iteration-count(@count: 1) {
         animation-iteration-count:@count;
-        -moz-animation-iteration-count:@count; /* Firefox */
-        -webkit-animation-iteration-count:@count; /*Safari and Chrome*/
-        -o-animation-iteration-count:@count; /* Opera */
+        -moz-animation-iteration-count:@count; // Firefox
+        -webkit-animation-iteration-count:@count; //Safari and Chrome
+        -o-animation-iteration-count:@count; // Opera
+    }
+
+    .infinite() {
+        #animation > .iteration-count(infinite);
     }
 
     .direction(@direction) {
         animation-direction:@direction;
-        -moz-animation-direction:@direction; /* Firefox */
-        -webkit-animation-direction:@direction; /* Safari and Chrome */
-        -o-animation-direction:@direction; /* Opera */
+        -moz-animation-direction:@direction; // Firefox
+        -webkit-animation-direction:@direction; // Safari and Chrome
+        -o-animation-direction:@direction; // Opera
     }
 
     .play-state(@state) {
         animation-play-state:@state;
-        -moz-animation-play-state:@state; /* Firefox*/
-        -webkit-animation-play-state:@state; /* Safari and Chrome */
-        -o-animation-play-state:@state; /* Opera */
+        -moz-animation-play-state:@state; // Firefox
+        -webkit-animation-play-state:@state; // Safari and Chrome
+        -o-animation-play-state:@state; // Opera
     }
 
     .fill-mode(@mode) {
