@@ -1,3 +1,6 @@
+Warning I'm going to feel free to make mayor changes that will break your code till december 1 2012.
+I did publish the code early because I'm hoping for feedback and awesome ideas.
+
 More.less brings you more to less.
 Inspired by Compass and Twitter bootstrap.
 More.less is a collection of css3 and cross-browser mixins and will ease your development a lot.
