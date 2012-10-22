@@ -3,6 +3,7 @@
     position: @position;
     top: @top;
     bottom: @bottom;
+    height:100%;
 }
 
 
@@ -11,15 +12,15 @@
     position: @position;
     right: @right;
     left:@left;
+	width:100%;
 }
-/*
-.stretch(x, @left:0, @right:0) when (@left = 0) and (@right = 0) {
-    width: 100%;
-}*/
 
-
-// shorthand to stretch element height and width
-/*
-.stretch(...) {
-    position: absolute;
-}*/
+.stretch(all, @position: absolute , @top:0, @bottom:0, @left:0, @right:0) {
+    position: @position;
+	top: @top;
+    bottom: @bottom;
+    right: @right;
+    left:@left;
+	width:100%;
+	height:100%;
+}
